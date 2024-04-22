@@ -1,0 +1,17 @@
+section {
+  display: flex;
+  height: 100vh;
+  gap: 20px;
+}
+
+.nosotros {
+  font-size: 2rem;
+  justify-self: center;
+}
+.nosotros p:last-child {
+  text-align: right;
+}
+.imagen {
+  align-items: center;
+  width: 50%;
+}

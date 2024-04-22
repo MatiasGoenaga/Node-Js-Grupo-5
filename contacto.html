@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="Css/contacto.css" />
+    <title>Contacto</title>
+  </head>
+  <body>
+    <div class="container fluid">
+      <h1>Formulario de Contacto</h1>
+      <div class="uno">
+        <form class="row" method="">
+          <div class="col-6 mb-3">
+            <label class="label fs-4 fw-bold" for="nombre">Nombre</label>
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              class="form-control"
+              required
+            />
+            <label class="label fs-4 fw-bold" for="mail">E-mail</label>
+            <input
+              type="email"
+              name="mail"
+              id="mail"
+              class="form-control"
+              placeholder="email@email.com"
+              required
+            />
+          </div>
+          <div class="col-6 mb-3">
+            <label class="label fs-4 fw-bold" for="apellido">Apellido</label>
+            <input
+              type="text"
+              name="apellido"
+              id="apellido"
+              class="form-control"
+              required
+            />
+            <label class="label fs-4 fw-bold" for="tel" class="form-label"
+              >Teléfono
+            </label>
+            <input
+              type="tel"
+              class="form-control"
+              id="tel"
+              name="tel"
+              minlength="9"
+              maxlength="14"
+              required
+            />
+          </div>
+          <div class="mt-1">
+            <label class="label fs-4 fw-bold" for="prov">Provincia </label>
+            <select class="form-select" name="prov" id="prov" required>
+              <option selected></option>
+              <option value="1">Buenos Aires</option>
+              <option value="2">Ciudad Autónoma de Buenos Aires</option>
+              <option value="3">Catamarca</option>
+              <option value="4">Chaco</option>
+              <option value="5">Chubut</option>
+              <option value="6">Córdoba</option>
+              <option value="7">Corrientes</option>
+              <option value="8">Entre Ríos</option>
+              <option value="9">Formosa</option>
+              <option value="10">Jujuy</option>
+              <option value="11">La Pampa</option>
+              <option value="12">La Rioja</option>
+              <option value="13">Mendoza</option>
+              <option value="14">Misiones</option>
+              <option value="15">Neuquén</option>
+              <option value="16">Río Negro</option>
+              <option value="17">Salta</option>
+              <option value="18">San Juan</option>
+              <option value="19">San Luis</option>
+              <option value="20">Santa Cruz</option>
+              <option value="21">Santa Fe</option>
+              <option value="22">Santiago del Estero</option>
+              <option value="23">Tierra del Fuego</option>
+              <option value="24">Tucumán</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="label fs-3 fw-bold" for="text_area" class="form-label"
+              >Escriba su Consulta</label
+            >
+            <textarea
+              class="form-control"
+              id="text_area"
+              rows="10"
+              name="text_area"
+              placeholder="Consulta"
+              required
+            ></textarea>
+          </div>
+          <div class="fs-4 fw-bold mb-3">
+            ¿Ha viajado alguna vez con nuestra empresa?
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="si"
+                checked
+              />
+              <label class="form-check-label" for="si"> Si </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="no"
+              />
+              <label class="form-check-label" for="no"> No </label>
+            </div>
+          </div>
+          <div class="boton mb-3">
+            <button class="btn btn-primary fs-5" type="submit">Enviar</button>
+          </div>
+          <br /><br /><br /><br /><br />
+          <h2 class="text-center fs-2">Gracias por su consulta</h2>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
