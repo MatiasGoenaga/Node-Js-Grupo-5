@@ -1,0 +1,39 @@
+.contenedor_tres_columnas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 20px;
+}
+.carrou {
+  grid-column: span 3;
+  background-color: red;
+}
+
+.oferta {
+  grid-column: span 3;
+  background-color: blue;
+}
+.foto_1 {
+  background-color: darkgreen;
+}
+
+.foto_2 {
+  background-color: brown;
+}
+
+.foto_3 {
+  background-color: cyan;
+}
+.proximamente {
+  grid-column: span 3;
+  background-color: yellow;
+}
+
+.hola {
+  background-image: url(../img/transparent-black.png);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 45%;
+  bottom: 0;
+}
