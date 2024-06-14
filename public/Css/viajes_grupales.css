@@ -1,0 +1,99 @@
+@import url(index.css);
+@import url(footer.css);
+
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  flex: 1 0 200px;
+  margin: 5px;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #2ee7ffd5;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tarjetaX {
+  background-color: #ec6eff4e; /* Cambia el color de fondo de la tarjeta 1 */
+  color: #14171a; /* Cambia el color del texto de la tarjeta 1 */
+}
+
+/* Enfasis en la tarjeta cuando se pasa el mouse sobre ella */
+.tarjetaX:hover {
+  background-color: #e787fde5;
+}
+
+/* Estilos para la mini ventana */
+.info-window {
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(37, 29, 29, 0.445); /* Blanco semi-transparente */
+  color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  /* Centra la mini ventana en la tarjeta */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Agrega el desenfoque al fondo */
+  backdrop-filter: blur(5px);
+  /* Hace que los bordes sean redondeados */
+  border-radius: 20px;
+  /* Agrega la transición */
+  transition: opacity 0.2s ease-in-out;
+  transition-delay: 0.2s; /* Agrega el retardo */
+}
+
+/* Muestra la mini ventana cuando se pasa el mouse sobre la tarjeta */
+.tarjetaX:hover .info-window {
+  opacity: 1;
+}
+
+/* Estilos para el botón */
+.info-button {
+  display: inline-block;
+  background-color: #008ab8; /* Cambia el color de fondo a tu gusto */
+  color: black; /* Cambia el color del texto a tu gusto */
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 10px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.info-button:hover {
+  background-color: #04a6dc; /* Cambia el color de fondo a tu gusto */
+  color: whitesmoke; /* Cambia el color del texto a tu gusto */
+  border-radius: 10px;
+}
+
+/* Ajusta los estilos para pantallas pequeñas */
+@media (max-width: 600px) {
+  .info-window {
+    /* Ajusta el ancho y el padding de la mini ventana */
+    max-width: 80%;
+    padding: 6px 8px;
+  }
+}
+
+/* responsive */
+

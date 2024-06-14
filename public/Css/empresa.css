@@ -1,0 +1,79 @@
+@import url(index.css);
+@import url(footer.css);
+
+main {
+  background-color: rgb(255, 255, 255);
+}
+#empresa {
+  text-align: center;
+  margin-left: 10px;
+  padding: 0 0 20px 0;
+  font-size: 2em;
+  color: black;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+  font-weight: 800;
+}
+#subtitulo {
+  font-size: 1em;
+  color: rgb(86, 86, 206);
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+}
+.nosotros {
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  text-align: center;
+  justify-self: center;
+  line-height: 180%;
+  padding: 5px;
+}
+.nosotros p:last-child {
+  text-align: right;
+}
+.imagen {
+  display: none;
+}
+.destacado {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  #empresa {
+    text-align: left;
+  }
+  section {
+    display: flex;
+    gap: 10px;
+    padding-left: 10px;
+  }
+  .imagen {
+    margin: 5px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .nosotros {
+    width: 65%;
+    text-align: justify;
+  }
+  .nosotros p {
+    padding-bottom: 20px;
+    margin: 0 0 10px;
+  }
+  .santiago {
+    width: 100%;
+  }
+}
+
+@media screen and (1024px <= width <= 1399px) {
+  .nosotros p {
+    font-size: 1.5em;
+    line-height: 200%;
+  }
+  .santiago {
+    width: 100%;
+  }
+}

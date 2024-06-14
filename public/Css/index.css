@@ -1,0 +1,654 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: Osmanthus;
+  src: url(../Fonts/Osmanthus.otf) format(opentype);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Opm;
+  src: url(../Fonts/OPM.ttf) format(truetype);
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  text-decoration: none;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url(../img/fondo5.png);
+  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+  background-size: cover; /* Asegura que la imagen de fondo cubra todo el cuerpo de la página */
+  backdrop-filter: blur(5px); /* Desenfoca el fondo */
+}
+
+/* Aplicación de la animación a la imagen de las estrellas */
+
+.logo_2::after {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 52%;
+  height: 200%;
+  background-image: url(../img/estrellas.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: fadeIn 2.5s ease-in-out forwards;
+  pointer-events: none; /* Los clics pasan a través del pseudo-elemento */
+  z-index: 2;
+}
+
+/* Estilos del header */
+header {
+  border-radius: 30px;
+
+  position: relative;
+  background-color: rgba(241, 11, 172, 0.158);
+  color: hsla(0, 23%, 51%, 0.507);
+  filter: brightness(110%) contrast(120%);
+  margin-bottom: 20px;
+}
+
+.logo {
+  display: flex;
+  gap: 5px;
+  position: relative;
+  justify-content: center;
+  padding: 2%;
+}
+.logo_2 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.texto_titulo {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  justify-content: center;
+}
+.imagen_1 {
+  max-width: 25%;
+  object-fit: contain;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+#titulo {
+  font-family: Osmanthus, sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  text-shadow: 11px 2px 62px #e81919;
+  -webkit-text-stroke: #000000 0.6px;
+}
+#titulo_2 {
+  font-family: Opm, sans-serif;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 100;
+  color: #000;
+  text-shadow: 14px 2px 61px #e81919;
+  -webkit-text-stroke: #ffffff 0.2px;
+}
+#titulo_3 {
+  display: none;
+  font-family: "Dancing Script", cursive;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+  position: absolute;
+  top: 68px;
+  left: 10px;
+}
+
+.navbar > .container {
+  display: block;
+}
+
+.nav-link {
+  padding: 3px;
+  font-size: 1em;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #ba94d3;
+}
+.nav-link:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  text-shadow: 2px 2px 18px #814c92ee;
+  transform: translateY(-2px);
+  transition: all 0.2s;
+}
+
+main {
+  background-color: #ffffff07;
+}
+
+/* Carrusel */
+
+.background-image {
+  position: relative;
+}
+
+.background-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: inherit;
+  filter: blur(0px);
+  transition: filter 0.3s ease-in-out;
+}
+
+.carousel-item:hover .background-image::before {
+  filter: blur(10px);
+}
+
+.contenedor_tres_columnas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+
+.carrou,
+.oferta,
+.patagonia {
+  border-radius: 20px;
+}
+
+.carrou {
+  margin-bottom: 20px;
+  grid-column: span 3;
+  width: 100%;
+  justify-self: center;
+  overflow: hidden;
+}
+
+.carousel-caption {
+  color: #ffffff;
+  position: relative;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+.carousel-caption::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: blur(0px); /* Inicialmente, no hay desenfoque */
+  transition: backdrop-filter 0.3s ease-in-out; /* Transición suave del desenfoque */
+}
+
+.carousel-caption:hover::before {
+  backdrop-filter: blur(1px); /* Añade desenfoque al pasar el mouse */
+}
+
+
+/* Botones-indicadores carrusel */
+
+.carousel-indicators button {
+  background-color: #e100ff; 
+  border: none; /* Sin borde */
+  width: 16px; /* Tamaño del punto */
+  height: 16px; /* Tamaño del punto */
+  border-radius: 50%; /* Redondeado */
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transición suave */
+}
+
+.carousel-indicators .active {
+  background-color: #f54ee7; /* Color de fondo activo */
+  transform: scale(1.4); /* Aumenta el tamaño del punto activo */
+}
+
+
+.carousel-control-prev, .carousel-control-next {
+  width: 10%; /* Ancho del área de los botones */
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-image: none; 
+  font-size: 56px; /* Ajusta el tamaño del icono */
+  color: #ff00c8; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.3s ease-in-out; /*  transición suave */
+}
+
+.carousel-control-prev-icon::before, .carousel-control-next-icon::before {
+  content: '«'; /* Doble flecha hacia la izquierda */
+  font-family: Arial, sans-serif; /* Fuente del icono */
+}
+
+.carousel-control-next-icon::before {
+  content: '»'; /* Doble flecha hacia la derecha */
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon, .carousel-control-next:hover .carousel-control-next-icon {
+  color: #f700ff; /* Cambia el color al pasar el mouse */
+}
+
+
+/* Section Oferta Cataratas */
+.oferta {
+  color: #f0d4ff;
+  grid-column: span 3;
+  background: linear-gradient(
+    to right,
+    rgba(12, 75, 5, 0.2),
+    rgba(29, 55, 43, 0.448)
+  );
+}
+
+.video-container {
+  width: 100%; /* Cambia esto al tamaño que prefieras */
+  margin-left: 2% auto;
+}
+
+.video-gif {
+  width: 100%;
+  height: auto; /* Esto mantendrá la proporción del video */
+  border-radius: 4%;
+}
+
+/* Section Patagonia*/
+.patagonia {
+  grid-column: span 3;
+  text-align: center;
+}
+
+.title_name {
+  text-align: center;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: 0.8em;
+}
+.titulo_patagonia {
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+/* Section Proxi*/
+.proximamente {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  grid-column: span 3;
+  position: relative;
+  text-align: center;
+}
+.proximamente img {
+  max-width: 100%;
+  height: auto;
+}
+.proximamente h4 {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  color: #000;
+  text-shadow: 2px 2px 18px #e81919;
+  -webkit-text-stroke: #ff0000 0.6px;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+}
+.proximamente h3 {
+  font-family: Osmanthus;
+  font-size: 0.9em;
+  text-shadow: 2px 2px 18px #e81919;
+  -webkit-text-stroke: #ffffff 0.6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.btn-danger {
+  font-size: 10px;
+  border-radius: 0;
+  position: absolute;
+  top: 65%;
+  left: 25%;
+}
+.btn-danger a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.sobreimpreso {
+  background-image: url(../img/transparent-black.png);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 45%;
+  bottom: 0;
+}
+#subir {
+  display: flex;
+  width: 10%;
+  justify-content: center;
+  text-align: center;
+  margin: 0px auto;
+  background: #eee;
+  border: 0;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: 0.5em;
+  color: #000000;
+}
+#subir:hover {
+  background: rgb(127, 169, 240);
+  font-weight: bold;
+}
+.viajes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+.cataratas {
+  width: 100%;
+  padding: 10px;
+}
+.cataratas_1 {
+  width: 100%;
+  border-radius: 10px;
+}
+.titulo_oferta {
+  font-size: 1em;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+.info {
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+  padding-bottom: 5px;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+}
+.info h4 {
+  font-size: 1em;
+  font-weight: 900;
+}
+.ph--star-bold {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23f7db26' d='M243 96a20.33 20.33 0 0 0-17.74-14l-56.59-4.57l-21.84-52.81a20.36 20.36 0 0 0-37.66 0L87.35 77.44L30.76 82a20.45 20.45 0 0 0-11.66 35.88l43.18 37.24l-13.2 55.7A20.37 20.37 0 0 0 79.57 233L128 203.19L176.43 233a20.39 20.39 0 0 0 30.49-22.15l-13.2-55.7l43.18-37.24A20.43 20.43 0 0 0 243 96m-70.47 45.7a12 12 0 0 0-3.84 11.86L181.58 208l-47.29-29.08a12 12 0 0 0-12.58 0L74.42 208l12.89-54.4a12 12 0 0 0-3.84-11.86l-42.27-36.5l55.4-4.47a12 12 0 0 0 10.13-7.38L128 41.89l21.27 51.5a12 12 0 0 0 10.13 7.38l55.4 4.47Z'/%3E%3C/svg%3E");
+}
+p {
+  margin-bottom: 0;
+}
+.btn-primary a {
+  color: #ffff;
+  text-decoration: none;
+}
+time {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+.carousel_title {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  padding: 10px;
+}
+.carousel_parrafo {
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 250%;
+  text-align: justify;
+  padding: 10px;
+}
+
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: auto;
+    width: 92%;
+  }
+
+
+  .video-container {
+    width: 100% auto; /* Ajusta esto al tamaño que prefieras para pantallas medianas */
+    margin-left: 1%; /* Centra el contenedor del video */
+  }
+
+  .imagen_1 {
+    max-width: 30%;
+  }
+  #titulo {
+    font-size: 4em;
+  }
+  #titulo_2 {
+    font-size: 2.5em;
+  }
+  #titulo_3 {
+    display: block;
+    font-size: 2em;
+    position: absolute;
+    top: 150px;
+    left: 60%;
+  }
+  .navbar {
+    min-height: 100px;
+    border: 1px solid transparent;
+  }
+  .nav-item {
+    margin: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 1px; /* Añade relleno para mover la raya hacia adentro */
+  }
+
+  .nav-item:last-child {
+    border-right: 0;
+  }
+  .nav-link {
+    font-size: 1em;
+    padding: 10px 15px;
+  }
+  #subir {
+    font-size: 1em;
+    width: 15%;
+  }
+  .viajes {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-evenly;
+  }
+  .cataratas {
+    width: 40%;
+  }
+  .titulo_oferta {
+    font-size: 2em;
+  }
+  .info {
+    width: 60%;
+    font-size: 1.5em;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+  }
+  .ph--star-bold {
+    width: 24px;
+    height: 24px;
+  }
+  .title_name {
+    font-size: 1.8em;
+  }
+  .titulo_patagonia {
+    font-size: 2em;
+  }
+  .proximamente h4 {
+    position: absolute;
+    left: 30%;
+    font-size: 2.5em;
+  }
+  .proximamente h3 {
+    font-size: 2.2em;
+  }
+  .btn-danger {
+    position: absolute;
+    top: 85%;
+    left: 38%;
+    font-size: 1em;
+    max-width: fit-content;
+    border-radius: 12%;
+  }
+}
+@media screen and (1024px <= width <= 1399px) {
+  body {
+    margin: auto;
+    width: 60%;
+  }
+  .video-container {
+    width: 105%; /* Ajusta esto al tamaño que prefieras para pantallas medianas */
+    margin-left: 1%; /* Centra el contenedor del video */
+  }
+
+  .imagen_1 {
+    max-width: 20%;
+  }
+  .nav-link {
+    font-size: 1em;
+  }
+  #titulo {
+    font-size: 3.5em;
+  }
+  #titulo_2 {
+    font-size: 2em;
+  }
+  #titulo_3 {
+    font-size: 2em;
+    position: absolute;
+    top: 125px;
+    left: 54%;
+  }
+  .navbar-nav {
+    margin: 25px 0px 1px 0px;
+    justify-content: space-around;
+  }
+  .cataratas {
+    width: 50%;
+  }
+  .info {
+    width: 50%;
+  }
+  .proximamente h3 {
+    font-size: 1.9em;
+  }
+  .proximamente h4 {
+    left: 26%;
+  }
+  .btn-danger {
+    top: 80%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  body {
+    margin: auto;
+    width: 75%;
+  }
+  .imagen_1 {
+    max-width: 20%;
+  }
+  .nav-link {
+    font-size: 1em;
+  }
+  #titulo {
+    font-size: 3.5em;
+  }
+  #titulo_2 {
+    font-size: 2em;
+  }
+  #titulo_3 {
+    font-size: 2em;
+    position: absolute;
+    top: 125px;
+    left: 54%;
+  }
+  #subir {
+    width: 10%;
+  }
+  .cataratas {
+    width: 60%;
+  }
+  .titulo_oferta {
+    font-size: 2.5em;
+  }
+  .info {
+    width: 40%;
+    font-size: 2em;
+  }
+  .ph--star-bold {
+    width: 32px;
+    height: 32px;
+  }
+  time {
+    font-size: 1.5em;
+  }
+  .carousel_title {
+    font-size: 2.5em;
+  }
+  .carousel_parrafo {
+    font-size: 1.5em;
+    line-height: 200%;
+    text-align: justify;
+    padding: 10px;
+  }
+  .titulo_patagonia {
+    font-size: 2.5em;
+  }
+  .proximamente h4 {
+    left: 20%;
+    font-size: 3em;
+  }
+  .proximamente h3 {
+    font-size: 2.7em;
+  }
+  .btn-danger {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-control-prev, .carousel-control-next {
+    width: 15%; /* Ancho del área de los botones en pantallas pequeñas */
+  }
+
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    font-size: 44px; /* Tamaño del icono en pantallas pequeñas */
+  }
+}

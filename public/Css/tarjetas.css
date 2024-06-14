@@ -1,0 +1,107 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 5px;
+}
+
+.card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card {
+  background-color: #ebe7e7;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card:hover {
+  background-color: #4eff9e;
+}
+
+.tarjeta1 {
+  background-color: #268cf1; /* Cambia el color de fondo de la tarjeta 1 */
+  color: #343a40; /* Cambia el color del texto de la tarjeta 1 */
+}
+
+.tarjeta2 {
+  background-color: #343a40; /* Cambia el color de fondo de la tarjeta 2 */
+  color: #f8f9fa; /* Cambia el color del texto de la tarjeta 2 */
+}
+
+.tarjeta3 {
+  background-color: #268cf1; /* Cambia el color de fondo de la tarjeta 1 */
+  color: #343a40; /* Cambia el color del texto de la tarjeta 1 */
+}
+
+.tarjeta4 {
+  background-color: #343a40; /* Cambia el color de fondo de la tarjeta 2 */
+  color: #f8f9fa; /* Cambia el color del texto de la tarjeta 2 */
+}
+.tarjeta5 {
+  background-color: #268cf1; /* Cambia el color de fondo de la tarjeta 1 */
+  color: #343a40; /* Cambia el color del texto de la tarjeta 1 */
+}
+
+.tarjeta6 {
+  background-color: #343a40; /* Cambia el color de fondo de la tarjeta 2 */
+  color: #f8f9fa; /* Cambia el color del texto de la tarjeta 2 */
+}
+.tarjeta7 {
+  background-color: #268cf1; /* Cambia el color de fondo de la tarjeta 1 */
+  color: #343a40; /* Cambia el color del texto de la tarjeta 1 */
+}
+
+.tarjeta8 {
+  background-color: #343a40; /* Cambia el color de fondo de la tarjeta 2 */
+  color: #f8f9fa; /* Cambia el color del texto de la tarjeta 2 */
+}
+.tarjeta9 {
+  background-color: #268cf1; /* Cambia el color de fondo de la tarjeta 1 */
+  color: #343a40; /* Cambia el color del texto de la tarjeta 1 */
+}
+
+.tarjeta10 {
+  background-color: #343a40; /* Cambia el color de fondo de la tarjeta 2 */
+  color: #f8f9fa; /* Cambia el color del texto de la tarjeta 2 */
+}
+.tarjeta11 {
+  background-color: #268cf1; /* Cambia el color de fondo de la tarjeta 1 */
+  color: #343a40; /* Cambia el color del texto de la tarjeta 1 */
+}
+
+.tarjeta12 {
+  background-color: #343a40; /* Cambia el color de fondo de la tarjeta 2 */
+  color: #f8f9fa; /* Cambia el color del texto de la tarjeta 2 */
+}
+.tarjeta13 {
+  background-color: #268cf1; /* Cambia el color de fondo de la tarjeta 1 */
+  color: #343a40; /* Cambia el color del texto de la tarjeta 1 */
+}
+
+.tarjeta14 {
+  background-color: #343a40; /* Cambia el color de fondo de la tarjeta 2 */
+  color: #f8f9fa; /* Cambia el color del texto de la tarjeta 2 */
+}
+.tarjeta15 {
+  background-color: #268cf1; /* Cambia el color de fondo de la tarjeta 1 */
+  color: #343a40; /* Cambia el color del texto de la tarjeta 1 */
+}
+
+.tarjeta16 {
+  background-color: #343a40; /* Cambia el color de fondo de la tarjeta 2 */
+  color: #f8f9fa; /* Cambia el color del texto de la tarjeta 2 */
+}
