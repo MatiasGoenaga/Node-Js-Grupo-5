@@ -25,8 +25,35 @@
     <!-- Tarjetas ------------->
 
     <div id="tarjetas" class="grid"></div>
-
-    <!-- Zona de footer -->
+    <div>
+      <form
+        action="/viajesgrupales"
+        method="POST"
+        enctype="multipart/form-data"
+        class="row"
+      >
+        <h1 id="titulo_form" class="text-white">
+          Formulario para agregar Destino
+        </h1>
+        <label class="label fs-4 fw-bold text-white" for="destino"
+          >Nombre del Destino</label
+        >
+        <input type="text" name="destino" class="form-control" />
+        <label class="label fs-4 fw-bold text-white" for="archivo"
+          >Imagen del Destino</label
+        >
+        <input type="file" name="archivo" class="form-control" />
+        <label class="label fs-4 fw-bold text-white" for="destino"
+          >Id del País</label
+        >
+        <input type="number" name="pais" placeholder="1" class="form-control" />
+        <div class="boton mb-3">
+          <button class="btn btn-primary fs-5" type="submit">
+            Crear Nuevo Destino
+          </button>
+        </div>
+      </form>
+    </div>
 
     <footer id="footer"></footer>
 

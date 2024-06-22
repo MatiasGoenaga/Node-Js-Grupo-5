@@ -8,7 +8,7 @@ const encabezado = `<nav class="navbar navbar-expand-md">
     <div class="logo_2">
       <img
         class="imagen_1"
-        src="img/Logo_marte.png"
+        src="/img/Logo_marte.png"
         alt="logo de la Empresa"
       />
       <div class="texto_titulo">
@@ -37,7 +37,7 @@ const encabezado = `<nav class="navbar navbar-expand-md">
   <div class="collapse navbar-collapse mx-auto" id="navbarNav">
     <ul class="navbar-nav mx-auto">
       <li class="nav-item">
-        <a class="nav-link " aria-current="page" href="index.html"
+        <a class="nav-link " aria-current="page" href="/index.html"
           >INICIO
         </a>
       </li>
@@ -47,10 +47,10 @@ const encabezado = `<nav class="navbar navbar-expand-md">
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="contacto.html">CONTACTO </a>
+        <a class="nav-link" href="/contacto.html">CONTACTO </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="empresa.html">EMPRESA</a>
+        <a class="nav-link" href="/empresa.html">EMPRESA</a>
       </li>
     </ul>
   </div>
@@ -62,7 +62,7 @@ class="navigation-section"
 style="display: flex; justify-content: space-around"
 >
 <div class="logo-section" style="margin: 0 20px">
-  <img src="img/Logo_marte.png" class="minilogo2x" alt="" />
+  <img src="/img/Logo_marte.png" class="minilogo2x" alt="" />
   <div class="social-icons">
     <a
       href="https://www.instagram.com"

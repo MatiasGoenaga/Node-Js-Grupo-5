@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 const port = 3000 || 8080 || process.env.PORT;
+app.set("view engine", "ejs");
+app.set("views", __dirname + "/src/views");
 const rutas = require("./src/routes/mainRoutes");
 const override = require("method-override");
 
