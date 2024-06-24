@@ -224,14 +224,3 @@ function validarFormulario(event) {
 form.addEventListener("submit", function () {
   form.reset();
 });
-
-const alerta = (titulo, mensaje, icono) => {
-  swal.fire({
-    icon: icono || "",
-    title: titulo || "",
-    text: mensaje,
-    showConfirmButton: false,
-    timer: 1500,
-    width: "240px",
-  });
-};
