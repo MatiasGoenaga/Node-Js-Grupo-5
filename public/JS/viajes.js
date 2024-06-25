@@ -1,5 +1,5 @@
 document.querySelector("body").onload = async () => {
-  const res = await fetch("http://localhost:3000/viajesgrupales");
+  const res = await fetch("/viajesgrupales");
   const datos = await res.json();
   let listahtml = document.querySelector("#tarjetas");
   listahtml.innerHTML = " ";
