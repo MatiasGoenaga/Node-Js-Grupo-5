@@ -14,4 +14,10 @@ El proyecto consiste en la creación de un sitio web dedicado a una Agencia de V
 
 ## Proyecto Backend
 
-Se generaron los archivos index.js y las carpetas correspondientes para hacer funcionar el servidor. En el Front, en la página **viajesgrupales.html** se crearon las cards de Destinos cargadas desde la base de datos con la información disponible en las tablas. Luego se agrego los inputs y labels para crear un nuevo registro en la base de datos, modificarlo y eliminarlo (Metodo POST, PUT, DELETE).
+Se generaron los archivos index.js y las carpetas correspondientes para hacer funcionar el servidor. En el Front, en la página **viajesgrupales.html** se crearon las cards de Destinos cargadas desde la base de datos con la información disponible en las tablas.
+Las tablas creadas fueron las siguientes: **Destinos**, **Paises**, **Salidas** y **Users**.
+Luego se agrego los inputs y labels para crear un nuevo registro en la base de datos, modificarlo y eliminarlo (Metodo POST, PUT, DELETE).
+
+## Replit del Proyecto
+
+[text](https://05486809-2447-4526-9fb3-8ea14dcdafe6-00-vqgzpnxv02dx.picard.replit.dev/)
