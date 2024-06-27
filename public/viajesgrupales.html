@@ -50,15 +50,18 @@
         >
         <input type="file" name="archivo" class="form-control" id="archivo" />
         <label class="label fs-4 fw-bold text-white" for="pais"
-          >Id del País</label
+          >País del Destino</label
         >
-        <input
-          type="number"
-          name="pais"
-          placeholder="1"
-          class="form-control"
-          id="pais"
-        />
+        <select name="pais" id="pais" class="form-control" required>
+          <option value="0"></option>
+          <option value="1">Argentina</option>
+          <option value="2">Estados Unidos</option>
+          <option value="3">Brasil</option>
+          <option value="4">España</option>
+          <option value="5">Italia</option>
+          <option value="6">México</option>
+          <option value="7">Perú</option>
+        </select>
         <div class="boton mb-3">
           <button class="btn btn-primary fs-5" type="submit" id="boton_submit">
             Crear Nuevo Destino

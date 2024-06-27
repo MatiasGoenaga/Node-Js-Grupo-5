@@ -26,7 +26,7 @@ module.exports = {
 
   getModificar: async (req, res) => {
     const [modificar] = await conn.query(
-      "SELECT * FROM Destinos WHERE ID=?",
+      "SELECT * from Destinos WHERE ID=?",
       req.params.ID
     );
     res.render("modificar", { registro: modificar[0] });
