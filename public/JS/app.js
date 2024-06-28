@@ -52,6 +52,9 @@ const encabezado = `<nav class="navbar navbar-expand-md">
       <li class="nav-item">
         <a class="nav-link" href="/empresa.html">EMPRESA</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/login.html">LOGIN</a>
+      </li>
     </ul>
   </div>
 </div>

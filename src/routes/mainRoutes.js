@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const controladores = require("../controllers/mainController");
+const auth = require("./../config/auth");
 const multer = require("multer");
 
 const storage = multer.diskStorage({
@@ -14,7 +15,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-router.get("/viajesgrupales", controladores.getListado);
+router.get("/viajesgrupales", auth, controladores.getListado);
 router.post(
   "/viajesgrupales",
   upload.single("archivo"),

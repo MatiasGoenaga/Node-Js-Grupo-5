@@ -21,7 +21,9 @@ module.exports = {
       req.file.filename,
       req.body.pais,
     ]);
-    res.redirect("/viajesgrupales.html");
+    setTimeout(function () {
+      res.redirect("/viajesgrupales.html");
+    }, 1500);
   },
 
   getModificar: async (req, res) => {

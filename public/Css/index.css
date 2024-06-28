@@ -209,11 +209,10 @@ main {
   backdrop-filter: blur(1px); /* Añade desenfoque al pasar el mouse */
 }
 
-
 /* Botones-indicadores carrusel */
 
 .carousel-indicators button {
-  background-color: #e100ff; 
+  background-color: #e100ff;
   border: none; /* Sin borde */
   width: 16px; /* Tamaño del punto */
   height: 16px; /* Tamaño del punto */
@@ -226,36 +225,38 @@ main {
   transform: scale(1.4); /* Aumenta el tamaño del punto activo */
 }
 
-
-.carousel-control-prev, .carousel-control-next {
+.carousel-control-prev,
+.carousel-control-next {
   width: 10%; /* Ancho del área de los botones */
   background: none; /* Sin fondo */
   border: none; /* Sin borde */
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  background-image: none; 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
   font-size: 56px; /* Ajusta el tamaño del icono */
-  color: #ff00c8; 
+  color: #ff00c8;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: color 0.3s ease-in-out; /*  transición suave */
 }
 
-.carousel-control-prev-icon::before, .carousel-control-next-icon::before {
-  content: '«'; /* Doble flecha hacia la izquierda */
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+  content: "«"; /* Doble flecha hacia la izquierda */
   font-family: Arial, sans-serif; /* Fuente del icono */
 }
 
 .carousel-control-next-icon::before {
-  content: '»'; /* Doble flecha hacia la derecha */
+  content: "»"; /* Doble flecha hacia la derecha */
 }
 
-.carousel-control-prev:hover .carousel-control-prev-icon, .carousel-control-next:hover .carousel-control-next-icon {
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
   color: #f700ff; /* Cambia el color al pasar el mouse */
 }
-
 
 /* Section Oferta Cataratas */
 .oferta {
@@ -431,14 +432,23 @@ time {
   text-align: justify;
   padding: 10px;
 }
-
+.login {
+  text-align: center;
+}
+.form_login {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
 
 @media screen and (min-width: 768px) {
   body {
     margin: auto;
     width: 92%;
   }
-
 
   .video-container {
     width: 100% auto; /* Ajusta esto al tamaño que prefieras para pantallas medianas */
@@ -644,11 +654,13 @@ time {
 }
 
 @media (max-width: 768px) {
-  .carousel-control-prev, .carousel-control-next {
+  .carousel-control-prev,
+  .carousel-control-next {
     width: 15%; /* Ancho del área de los botones en pantallas pequeñas */
   }
 
-  .carousel-control-prev-icon, .carousel-control-next-icon {
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
     font-size: 44px; /* Tamaño del icono en pantallas pequeñas */
   }
 }

@@ -1,5 +1,17 @@
 document.querySelector("body").onload = async () => {
-  const res = await fetch("/viajesgrupales");
+  const token = localStorage.getItem("jwt-token");
+
+  const res = await fetch(`/viajesgrupales`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  if (!res.ok) {
+    window.location.href = "/login.html";
+    throw Error("Problemas en login");
+  }
   const datos = await res.json();
   let listahtml = document.querySelector("#tarjetas");
   listahtml.innerHTML = " ";
