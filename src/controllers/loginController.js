@@ -11,7 +11,9 @@ module.exports = {
       `INSERT INTO Users (user, password) VALUES (?,?);`,
       [user, encriptado]
     );
-    res.redirect("/login.html");
+    setTimeout(function () {
+      res.redirect("/login.html");
+    }, 1000);
   },
   login: async (req, res) => {
     const { user, password } = req.body;

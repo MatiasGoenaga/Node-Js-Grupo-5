@@ -53,6 +53,8 @@ module.exports = {
       `DELETE FROM Destinos WHERE ID=?`,
       req.body.idEliminar
     );
-    res.redirect("/viajesgrupales.html");
+    setTimeout(function () {
+      res.redirect("/viajesgrupales.html");
+    }, 1500);
   },
 };

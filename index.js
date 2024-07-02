@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 const app = express();
 const rutasLogin = require("./src/routes/loginRoutes.js");
 const port = 3000 || 8080 || process.env.PORT;
